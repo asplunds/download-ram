@@ -17,7 +17,7 @@ html, body {
     padding-top: var(--nav-height);
     transition-property: padding;
     box-sizing: border-box;
-    background-image: url("/assets/hero-background-high-res.jpg");
+    background-image: url("../assets/hero-background-high-res.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
