@@ -1,0 +1,10 @@
+:root {
+    --theme-color: #349beb;
+    --background-color: #303030;
+    --background-color-2: #1c1c1c;
+    --nav-height: 100px;
+    --color: #ccc;
+    --color-2: #fff;
+    --constrict-body: 1400px;
+    --border-radius: 20px;
+}

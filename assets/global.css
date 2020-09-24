@@ -1,0 +1,85 @@
+html {
+    scroll-behavior: smooth;
+}
+a {
+    color: var(--theme-color);
+    text-decoration: none;
+    transition: .2s color;
+}
+a:hover {
+    color: var(--color-2);
+}
+.full-height {
+    height: calc(100vh - var(--nav-height));
+}
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: var(--nav-height);
+    width: 100%;
+    z-index: 99;
+}
+.hero-section, header {
+    transition: height .2s ease-out;
+}
+.scrolled-top {
+    --nav-height: 80px;
+}
+
+header legend {
+    position: absolute;
+    background: rgba(0,0,0,.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: background .2s ease-out;
+}
+.scrolled-top header legend {
+    background: var(--background-color-2)
+}
+nav {
+    position: relative;
+    height: 100%;
+    display: flex;
+    max-width: var(--constrict-body);
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+nav > * {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+nav .menu-items {
+    flex: none;
+}
+nav .menu-logo {
+    flex: 1
+}
+nav ul li {
+    padding: 15px;
+    list-style: none;
+}
+.menu-items a {
+    color: var(--color);
+}
+.menu-items a:hover {
+    color: var(--color-2);
+}
+
+.parallax-reveal {
+    transition: transform 0.3s ease-out, opacity 0.3s;
+}
+.parallax-reveal.parallax-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+.parallax-reveal.parallax-shown {
+    opacity: 1;
+    transform: translateY(0);
+}
