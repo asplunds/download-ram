@@ -1,0 +1,22 @@
+{
+  "name": "download-ram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asplunds/download-ram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asplunds/download-ram/issues"
+  },
+  "homepage": "https://github.com/asplunds/download-ram#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

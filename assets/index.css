@@ -249,6 +249,12 @@ html, body {
 
 }
 
+@media screen and (max-height: 1000px) {
+    .plan {
+        --plan-margin: 10px;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .plan {
         --plan-margin: 10px;
