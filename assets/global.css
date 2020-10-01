@@ -9,6 +9,22 @@ a {
 a:hover {
     color: var(--color-2);
 }
+nav .menu-logo a {
+    position: relative;
+    height: 100%;
+}
+nav .menu-logo img {
+    position: relative;
+    height: 100%;
+    display: block;
+    filter: contrast(0);
+}
+
+@media screen and (max-width: 800px) {
+    nav .menu-logo img {
+        display: none;
+    }
+}
 .full-height {
     height: calc(100vh - var(--nav-height));
 }
@@ -38,7 +54,8 @@ header legend {
     transition: background .2s ease-out;
 }
 .scrolled-top header legend {
-    background: var(--background-color-2)
+    background: var(--background-color-2);
+    opacity: 0.8;
 }
 nav {
     position: relative;

@@ -196,6 +196,7 @@ html, body {
     display: flex;
     flex-direction: column;
     transition: transform .2s;
+    max-width: 500px;
 }
 .plan:hover {
     transform: scale(1.05);
@@ -245,9 +246,6 @@ html, body {
     color: red;
 }
 
-.plan .plan-button-cont {
-
-}
 
 @media screen and (max-height: 1000px) {
     .plan {
