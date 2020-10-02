@@ -10,7 +10,8 @@ a:hover {
     color: var(--color-2);
 }
 .full-height {
-    height: calc(100vh - var(--nav-height));
+    height: calc(100vh);
+    max-height: 1080px;
 }
 header {
     position: fixed;
@@ -83,3 +84,5 @@ nav ul li {
     opacity: 1;
     transform: translateY(0);
 }
+
+

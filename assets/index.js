@@ -27,6 +27,11 @@ const docLoaded = new Promise(resolve => document.addEventListener("DOMContentLo
             }
             
         }
+
+
+        document.body.classList[window.scrollY > 2000 ? "add" : "remove"]("contact-fixed-show");
+
+    
     
     });
 
