@@ -196,6 +196,7 @@ html, body {
     display: flex;
     flex-direction: column;
     transition: transform .2s;
+    max-width: 500px;
 }
 .plan:hover {
     transform: scale(1.05);
