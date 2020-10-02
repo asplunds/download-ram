@@ -266,63 +266,6 @@ html, body {
 
 
 
-/* fancy button */
-
-.fancy-button {
-    background: #fff;
-    border: none;
-    padding: 0;
-    border-radius: none;
-    width: 100%;
-    margin: 0;
-    position: relative;
-    --size: 50px;
-    font-size: 18px;
-    font-weight: light;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #828282;
-    box-shadow: 0 0 20px #c3c3c3;
-    overflow: hidden;
-}
-.fancy-button:hover, .fancy-button:active {
-    --size: 100%;
-}
-.fancy-button:focus {
-    --size: 90%;
-    outline: none;
-}
-
-.fancy-button::before, .fancy-button::after {
-    content: "";
-    z-index: 2;
-    transform: rotate(45deg);
-
-    position: absolute;
-    width: var(--size);
-    height: calc(var(--size) - 7px);
-    background: #828282;
-    transition: all .2s ease-out;
-}
-.fancy-button::before {
-    top: -5px;
-    left: -5px;
-}
-.fancy-button::after {
-    bottom: -5px;
-    right: -5px;
-}
-.fancy-button .fancy-button-text {
-    z-index: 4;
-    --border-size: 2px;
-    padding: var(--padding, 20px 10px);
-    position: relative;
-    background: #fff;
-    width: calc(100% - var(--border-size) * 2);
-    height: calc(100% - var(--border-size) * 2);
-    box-sizing: border-box;
-    margin: var(--border-size)
-}
 
 
 /* contact */
@@ -342,11 +285,67 @@ html, body {
 .contact-fixed-show .hero-section.contact-fixed {
     display: block;
 }
+.contact-section .contact-section-inner {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.contact-section .contact-section-inner .contact-container {
+    padding: 20px;
+    max-width: 669px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    background: var(--color);
+    color: var(--background-color);
+    transform: translateY(calc((var(--percentage) + 0.5) * -400px));
+    opacity: calc((var(--percentage) - 0.5) * (var(--percentage) - 0.5));
+}
+.contact-section .contact-section-inner .contact-container > h1:first-child {
+    font-size: 60px;
+    margin: 40px 0;
+}
+.contact-section .contact-section-inner .contact-container .contact-email {
+    padding: 20px;
+    background: var(--background-color);
+    color: var(--color-2);
+    border: none;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: inherit;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 400px;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 400px) {
+
+    .contact-section .contact-section-inner .contact-container .contact-email {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+}
+
 
 /* footer */
 
 .footer-section {
+    --margin: 10px;
     position: relative;
+    padding: 40px 0;
     z-index: 99;
     background: var(--background-color-2);
 }
@@ -356,20 +355,17 @@ html, body {
     height: 100%;
     margin: 0 auto;
     flex-direction: column;
-    background: orange;
     max-width: var(--constrict-body);
 }
 .footer-section .footer-inner .footer-row {
     flex: 1;
-    margin: 10px 10px;
-    background: green;
+    margin: var(--margin) var(--margin);
     display: flex;
 }
 .footer-section .footer-inner .footer-row .footer-column {
     flex: 1;
-    background: blue;
-    margin: 5px 20px;
-    min-height: 300px;
+    margin: calc(var(--margin) / 2) calc(var(--margin) * 2);
+    /*min-height: 300px; testing*/
 
 }
 .footer-section .footer-inner .footer-row .footer-column.justify-double {
@@ -377,10 +373,38 @@ html, body {
 }
 
 .footer-section .big-header {
-    font-size: 100px;
+    font-size: 70px;
+}
+
+.footer-section .footer-link-list {
+    list-style: none;
+}
+.footer-section .footer-column .footer-link-list a {
+    color: var(--color-2);
+}
+.footer-section .footer-column .footer-link-list li {
+    padding: 3px var(--margin);
+    box-sizing: border-box;
+    font-size: .9rem;
+}
+.footer-section .footer-column:hover .footer-link-list a {
+    color: var(--color);
+}
+.footer-section .footer-column .footer-link-list a:hover {
+    color: var(--color-2);
+}
+.footer-column p {
+    padding: var(--margin) 0;
+}
+.footer-joke p {
+    margin: 0 auto;
+    text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
+    .footer-section {
+        --margin: 5px;
+    }
     .footer-section .footer-inner .footer-row {
         flex-direction: column;
     }
